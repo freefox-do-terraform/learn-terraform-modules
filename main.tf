@@ -19,8 +19,21 @@ provider "aws" {
   region  = "ap-southeast-2"
 }
 
+/*
 module "website_s3_bucket" {
   source = "./modules/aws-s3-static-website-bucket"
+
+  bucket_name = "devops-website-demo"
+
+  tags = {
+    Terraform   = "true"
+    Environment = "dev"
+  }
+}
+*/
+
+module "website_s3_bucket" {
+  source = "git::https://github.com/freefox-do-terraform/terraform-modules.git//aws-s3-static-website-bucket?ref=v0.0.1"
 
   bucket_name = "devops-website-demo"
 
