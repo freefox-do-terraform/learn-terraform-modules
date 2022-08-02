@@ -33,7 +33,7 @@ module "website_s3_bucket" {
 */
 
 module "website_s3_bucket" {
-  source = "git::https://github.com/freefox-do-terraform/terraform-modules.git//aws-s3-static-website-bucket?ref=v0.0.1"
+  source = "git::https://github.com/freefox-do-terraform/terraform-modules.git//aws-s3-static-website-bucket?ref=v0.0.4"
 
   bucket_name = "devops-website-demo"
 
